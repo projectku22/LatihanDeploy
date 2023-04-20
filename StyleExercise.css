@@ -1,0 +1,280 @@
+/* css di html n body dimana margin n padding di titik tengah desktop dengan ketebalan font tsb */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+/* di h1, 2 , 3 pakai font n ketebalan font ini */
+h1,h2,h3 {
+    font-family:sans-serif;
+    font-weight: 700px;
+}
+/* b untuk tulisan yang khusus untuk membuat attention */
+b {
+    font-weight: 700px;
+}
+
+/*landing-page untuk halaman atas (navigation) */
+#landing-page {
+    background-attachment:fixed; /*gambar tetap di tempat jgn ikt scroll*/
+    position:relative; /*fixed: tetap di tempat tapi ketutup gambar lain, sticky: tulisan ikt scroll klo sdh ketemu tulisan*/
+    height: 100vh;
+    background-size:cover;
+    background-image: url("https://cdn-prod.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg");
+}
+
+/*welcome-text (halo selamat datang... */
+.welcome-text {
+    position: absolute; /*fixed: tetap d sana biar pun d scroll, relative/absolute: ikut klo d scroll */
+    margin: 0;
+    width: 100%;
+    top: 45%;
+    text-align: center;
+    color: black;
+    transform: scale(1); /*perbesar ukuran dari h1/h2/h3 di atas */
+}
+
+
+
+/*untuk table navigation */
+ul.nav {
+    position: sticky; /*ikut jika scroll ke bawah */
+    top: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: white; /*background navigator */
+}
+
+/*pengaturan icon di navig*/
+.nav-icon > img {
+    width: 100%;
+}
+
+/*untuk table di navigator tapi warna black BELUM TAU efek kemana*/
+.nav > li {
+    display: inline-block; /* supaya navigation sejajar */
+    vertical-align: middle; /*di tengah layar */
+    margin: auto;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+}
+
+/*tulisan di navig*/
+.nav > li > a {
+    padding: 1em 2em;
+    display: inline-block; /*supaya sejajar*/
+    text-decoration: none;
+    color: black; /*warna tulisan navig hitam */
+    transition: 1s; /*supaya button bergerak */
+}
+
+/*kalau tulisan di hover */
+.nav > li > a:hover {
+    background-color: teal;
+}
+
+/*untuk garis, tidak pakai karena mau garis full saja
+hr {
+    max-width: 300px;
+    margin: 0 auto;
+}
+*/
+
+/*pengaturan foto untuk about me*/
+.section-introduction, .section-education, .section-working {
+    text-align: center;
+}
+
+/*untuk mengatur text edu n working supaya sejajar n berjarak*/
+.section-education, .section-working {
+    display: inline-block; /*supaya sejajar*/
+    margin-top: 5em; /*JARAK ANTARA paragraph education n working */
+}
+
+/*3 gambar about me*/
+.img-icon {
+    max-width: 12em;
+}
+
+/*jarak antara about me dg konten navigation n konten portofolio */
+#about-me {
+    padding: 2em 0;
+}
+
+/*pengaturan semua paragraph dg id:content-perkenalan*/
+.content-perkenalan {
+    font-size: 1.2em;
+    width: 80%;
+    max-width: 24em;
+    margin: 1em auto;
+    text-align: justify;
+}
+
+/*pengaturan untuk judul "my portofolio" dan "kontak saya" */
+.title-portofolio, .title-contact-us {
+    text-decoration: underline;
+    text-align: center;
+}
+
+/*BELUM TAU UNTUK APA*/
+.desktop { 
+    display: none !important;
+}
+
+/*pengaturan tulisan portofolio, jarak antara konten about me n kontak saya*/
+#Portofolio {
+    width: 100%; /*tulisan portofolio*/
+    padding: 2em 0; /*jarak antara konten about me n kontak saya*/
+}
+
+/*pengaturan peletakan gambar portofolio*/
+.container {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+/*pengaturan gambar portofolio*/
+.img-portofolio {
+    max-width: 500px;
+    display: inline-block;
+    width: 90%;
+    vertical-align: middle;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+/*pengaturan form*/
+.form-contact-us, .contact-info {
+    width: 100%;
+    text-align: center;
+}
+
+/*pengaturan untuk input*/
+.inputan {
+    width: 85%;
+    text-align: left;
+    display: block;
+    margin: 0 auto;
+}
+
+/*label yang di dlm inputan*/
+.inputan > label {
+    display: block; /*display di bawah*/ /*inline: diplay di sblh nya*/
+    font-size: 1.2em; /*ukuran tulisan label*/
+}
+/*textbox di dalam inputan*/
+.inputan > input, .inputan > textarea {
+    width: 100%;
+    margin: .5em 0;
+    font-size: 1em;
+}
+
+/*pengaturan button kirim*/
+.btn-kirim {
+    width: 85%;
+    margin: 1em 0;
+    border: none;
+    background-color: teal;
+    color: white;
+    font-size: 1em;
+    padding: .5em 0;
+}
+
+/* pengaturan untuk footer*/
+footer {
+    text-align: center;
+    margin-top: 2em;
+    padding: 1.5em 0;
+    color: white;
+    background-color: black;
+}
+
+/*pengaturan icon untuk no hp & email*/
+.contact-icon {
+    width: 100px;
+    margin: 2em;
+}
+
+/*jangan tampilkan keterangan no hp / email di web*/
+.contact-desktop {
+    display: none;
+}
+
+/*pengaturan link no hp & email */
+.contact-icon-bundler {
+    display: block; /*di bawah gambar. klo inline di samping gambar*/
+}
+
+/*icon no hp n email jadi bersebelahan*/
+.contact-info > div {
+    display: inline-block;
+}
+
+
+/*pengaturan kalau display min 595px*/
+@media only screen and (min-width: 0px) {
+    .non-desktop {
+        display: none;
+    }
+    .desktop {
+        display: block !important;
+    }
+    li.nav-icon {
+        padding: 0;
+        width: 45px;
+        margin: .3em 1em;
+        float: left;
+    }
+
+    .nav-icon > img {
+        width: 100%;
+    }
+
+    ul.nav {
+        text-align: right;
+    }
+
+    .section-working, .section-education {
+        width: 49.5%;
+        vertical-align: top;
+    }
+
+    hr {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .form-contact-us, .contact-info {
+        width: 49.5%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    #contact-us {
+        vertical-align: top;
+    }
+
+    .contact-desktop {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .contact-icon-bundler {
+        display: inline-block;
+        min-width: 300px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .contact-icon {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .contact-info > div {
+        display: block;
+    }
+  
+}
+
